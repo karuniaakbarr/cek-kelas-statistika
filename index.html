@@ -26,7 +26,8 @@
     <h2 class="font-semibold mb-2">Pilih Mata Kuliah</h2>
     <select id="mkID" class="w-full border rounded-xl p-2 mb-4">
       <option value="">-- Pilih Mata Kuliah --</option>
-      <optgroup label="Semester 1">1)</option>
+      <optgroup label="Semester 1">
+        <option value="SM4101">Kalkulus I (SM4101)</option>
         <option value="SF4103">Fisika Mekanika (SF4103)</option>
         <option value="SB4101">Biologi (SB4101)</option>
         <option value="SS4101">Pemrograman Komputer (SS4101)</option>
@@ -150,6 +151,28 @@
   </div>
 
   <script>
+    const jenisSelect = document.getElementById('jenis');
+    const mkSelect = document.getElementById('mkID');
+
+    function filterMatkul() {
+      const jenis = jenisSelect.value;
+      const options = mkSelect.querySelectorAll('option');
+
+      options.forEach(opt => {
+        if (!opt.value) return; // placeholder tetap tampil
+
+        if (jenis === '13100') {
+          // Statistika → hanya kode SS
+          opt.style.display = opt.value.startsWith('SS') ? 'block' : 'none';
+        } else {
+          // SKPB → selain SS
+          opt.style.display = opt.value.startsWith('SS') ? 'none' : 'block';
+        }
+      });
+    }
+
+    jenisSelect.addEventListener('change', filterMatkul);
+
     function buatLink() {
       const mkJur = document.getElementById('jenis').value;
       const mkID = document.getElementById('mkID').value;
@@ -167,6 +190,9 @@
       document.getElementById('preview').innerText = link;
       window.open(link, '_blank');
     }
+
+    // Filter awal saat halaman dibuka
+    filterMatkul();
   </script>
 </body>
 </html>
