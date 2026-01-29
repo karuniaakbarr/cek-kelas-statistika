@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cek Daftar Peserta Kelas S1 Statistika ITS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 min-h-screen flex items-center justify-center">
+  <div class="bg-white shadow-xl rounded-2xl p-6 w-full max-w-xl">
+    <h1 class="text-2xl font-bold text-center mb-4">Cek Daftar Peserta Kelas S1 Statistika</h1>
+
+    <h2 class="font-semibold mb-2">Pastikan Login SIAKAD</h2>
+    <a href="https://akademik.its.ac.id" target="_blank">
+      <button class="w-full bg-blue-600 text-white py-2 rounded-xl mb-4 hover:bg-blue-700 transition">
+        Login SIAKAD
+      </button>
+    </a>
+
+    <h2 class="font-semibold mb-2">Pilih Jenis Mata Kuliah</h2>
+    <select id="jenis" class="w-full border rounded-xl p-2 mb-4">
+      <option value="13100">Statistika</option>
+      <option value="__TPB">SKPB</option>
+    </select>
+
+    <h2 class="font-semibold mb-2">Pilih Mata Kuliah</h2>
+    <select id="mkID" class="w-full border rounded-xl p-2 mb-4">
+      <option value="">-- Pilih Mata Kuliah --</option>
+      <option value="">-- Pilih Mata Kuliah --</option>
+      <optgroup label="Semester 1">
+        <option value="SM4101">Kalkulus I (SM4101)</option>
+        <option value="SF4103">Fisika Mekanika (SF4103)</option>
+        <option value="SB4101">Biologi (SB4101)</option>
+        <option value="SS4101">Pemrograman Komputer (SS4101)</option>
+        <option value="SS4102">Matriks (SS4102)</option>
+        <option value="SS4103">Pengantar Metode Statistika (SS4103)</option>
+      </optgroup>
+      <optgroup label="Semester 2">
+        <option value="SM4201">Kalkulus II (SM4201)</option>
+        <option value="SS4204">Analisis Numerik (SS4204)</option>
+        <option value="SS4205">Basis Data (SS4205)</option>
+        <option value="SS4206">Komputasi Statistika (SS4206)</option>
+        <option value="SS4207">Pengantar Teori Peluang (SS4207)</option>
+      </optgroup>
+      <optgroup label="Semester 3">
+        <option value="SS4308">Analisis Regresi (SS4308)</option>
+        <option value="SS4309">Statistika Ofisial (SS4309)</option>
+        <option value="SS4310">Teknik Sampling dan Survei (SS4310)</option>
+        <option value="SS4311">Statistika Matematika (SS4311)</option>
+        <option value="SS4312">Matematika Lanjut (SS4312)</option>
+        <option value="SS4313">Desain Eksperimen (SS4313)</option>
+      </optgroup>
+      <optgroup label="Semester 4">
+        <option value="SS4414">Proses Stokastik (SS4414)</option>
+        <option value="SS4415">Statistika Pengontrolan Kualitas (SS4415)</option>
+        <option value="SS4416">Pengantar Ekonometrika (SS4416)</option>
+        <option value="SS4417">Statistika Non Parametrik (SS4417)</option>
+        <option value="SS4418">Pengantar Analisis Survival (SS4418)</option>
+        <option value="SS4419">Analisis Multivariat Terapan (SS4419)</option>
+        <option value="SS4420">Analisis Data Kategorik (SS4420)</option>
+      </optgroup>
+      <optgroup label="Semester 5">
+        <option value="SS4521">Teknik Simulasi (SS4521)</option>
+        <option value="SS4522">Data Mining dan Visualisasi (SS4522)</option>
+        <option value="SS4523">Analisis Data Statistik (SS4523)</option>
+        <option value="SS4524">Inovasi Bisnis Statistik (SS4524)</option>
+        <option value="SS4525">Pengantar Analisis Deret Waktu (SS4525)</option>
+        <option value="SS4526">Statistical Machine Learning (SS4526)</option>
+      </optgroup>
+      <optgroup label="MK Umum & Lainnya">
+        <option value="UG4911">Pancasila (UG4911)</option>
+        <option value="UG4914">Bahasa Inggris (UG4914)</option>
+        <option value="UG4915">Kewirausahaan Berbasis Teknologi (UG4915)</option>
+        <option value="UG4912">Bahasa Indonesia (UG4912)</option>
+        <option value="UG4913">Kewarganegaraan (UG4913)</option>
+        <option value="SS4742">Metodologi Penelitian (SS4742)</option>
+        <option value="SS4758">Kerja Praktik (SS4758)</option>
+        <option value="UG4916">Aplikasi Teknologi dan Transformasi Digital (UG4916)</option>
+        <option value="SS4862">Final Project (SS4862)</option>
+      </optgroup>
+      <optgroup label="Mata Kuliah Pilihan">
+        <option value="SS4627">Sistem Informasi Manajemen (SS4627)</option>
+        <option value="SS4628">Struktur Data dan Algoritma (SS4628)</option>
+        <option value="SS4741">Analisis Bayesian Komputasional (SS4741)</option>
+        <option value="SS4629">Analisis Keputusan Bisnis (SS4629)</option>
+        <option value="SS4630">Analisis Reliabilitas (SS4630)</option>
+        <option value="SS4631">Manajemen Operasi (SS4631)</option>
+        <option value="SS4743">Manajemen Kualitas (SS4743)</option>
+        <option value="SS4744">Perancangan Kualitas (SS4744)</option>
+        <option value="SS4746">Riset Operasi (SS4746)</option>
+        <option value="SS4632">Matematika Keuangan (SS4632)</option>
+        <option value="SS4633">Akuntansi (SS4633)</option>
+        <option value="SS4634">Analisis Finansial (SS4634)</option>
+        <option value="SS4635">Aktuaria (SS4635)</option>
+        <option value="SS4747">Analisis Risiko dan Optimasi Portofolio (SS4747)</option>
+        <option value="SS4745">Analitika Bisnis (SS4745)</option>
+        <option value="SS4748">Teori Ekonomi (SS4748)</option>
+        <option value="SS4749">Ekonometrika Deret Waktu (SS4749)</option>
+        <option value="SS4636">Regresi Non Parametrik (SS4636)</option>
+        <option value="SS4637">Metode Riset Sosial (SS4637)</option>
+        <option value="SS4750">Studi Kependudukan (SS4750)</option>
+        <option value="SS4751">Riset Pemasaran (SS4751)</option>
+        <option value="SS4638">Pengantar Statistika Klimatologi (SS4638)</option>
+        <option value="SS4752">Pengantar Statistika Spasial (SS4752)</option>
+        <option value="SS4753">Pengantar Biostatistika dan Epidemiologi (SS4753)</option>
+        <option value="SS4754">Introduction to Clinical Trials (SS4754)</option>
+        <option value="SS4755">Pengantar Statistika Bioinformatik (SS4755)</option>
+        <option value="SS4756">Pemodelan Persamaan Struktural (SS4756)</option>
+        <option value="SS4757">Pengantar Meta Analisis (SS4757)</option>
+        <option value="SS4639">Magang (SS4639)</option>
+        <option value="SS4640">Topik Khusus Statistika Teori (SS4640)</option>
+        <option value="SS4759">Topik Khusus Statistika Pemodelan (SS4759)</option>
+        <option value="SS4760">Topik Khusus Statistika Terapan (SS4760)</option>
+        <option value="SS4761">Topik Khusus Statistika Sains Data (SS4761)</option>
+      </optgroup>
+
+      <optgroup label="Mata Kuliah Agama">
+        <option value="UG4901">Agama Islam (UG4901)</option>
+        <option value="UG4902">Agama Kristen (UG4902)</option>
+        <option value="UG4903">Agama Katolik (UG4903)</option>
+        <option value="UG4904">Agama Hindu (UG4904)</option>
+        <option value="UG4905">Agama Buddha (UG4905)</option>
+        <option value="UG4906">Agama Khonghucu (UG4906)</option>
+      </optgroup>
+    </select>
+
+    <h2 class="font-semibold mb-2">Pilih Semester</h2>
+    <select id="semester" class="w-full border rounded-xl p-2 mb-4">
+      <option value="1">Ganjil</option>
+      <option value="2">Genap</option>
+    </select>
+
+    <h2 class="font-semibold mb-2">Pilih Tahun Akademik</h2>
+    <select id="tahun" class="w-full border rounded-xl p-2 mb-4">
+      <option value="2023">2023/2024</option>
+      <option value="2024">2024/2025</option>
+      <option value="2025" selected>2025/2026</option>
+      <option value="2026">2026/2027</option>
+    </select>
+
+    <h2 class="font-semibold mb-2">Pilih Kelas</h2>
+    <input id="kelas" type="text" placeholder="Contoh: A, B, 1" class="w-full border rounded-xl p-2 mb-4 uppercase" />
+
+    <h2 class="font-semibold mb-2">Link Daftar Peserta</h2>
+    <button onclick="buatLink()" class="w-full bg-green-600 text-white py-2 rounded-xl hover:bg-green-700 transition">
+      Buka Daftar Peserta
+    </button>
+
+    <p id="preview" class="text-sm text-gray-600 mt-3 break-all"></p>
+
+    <p class="text-center text-xs text-gray-500 mt-6">© 2026 by Karunia Akbar</p>
+  </div>
+
+  <script>
+    function buatLink() {
+      const mkJur = document.getElementById('jenis').value;
+      const mkID = document.getElementById('mkID').value;
+      const mkSem = document.getElementById('semester').value;
+      const mkThn = document.getElementById('tahun').value;
+      const mkKelas = document.getElementById('kelas').value.toUpperCase();
+
+      if (!mkID || !mkKelas) {
+        alert('Mohon lengkapi pilihan mata kuliah dan kelas.');
+        return;
+      }
+
+      const link = `https://akademik.its.ac.id/lv_peserta.php?mkJur=${mkJur}&mkID=${mkID}&mkSem=${mkSem}&mkThn=${mkThn}&mkKelas=${mkKelas}&mkThnKurikulum=2023`;
+
+      document.getElementById('preview').innerText = link;
+      window.open(link, '_blank');
+    }
+  </script>
+</body>
+</html>
